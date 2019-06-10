@@ -25,7 +25,7 @@ function createWindow () {
     win = null
   })
 }
-app.on('ready', createWindow)
+app.on('ready',  console.log('This Works')    )
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -35,6 +35,6 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
   if (win === null) {
-    createWindow()
+    console.log('This Works');    
   }
 })
