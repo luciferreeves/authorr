@@ -1,0 +1,21 @@
+{
+  "name": "authorr",
+  "version": "1.0.0",
+  "description": "A Simple App for Book Authoring",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/luciferreeves/authorr"
+  },
+  "keywords": [
+    "authorr",
+    "book",
+    "writing",
+    "authors"
+  ],
+  "author": "Kumar Priyansh",
+  "license": "Apache-2.0"
+}
