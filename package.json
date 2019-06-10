@@ -4,11 +4,11 @@
   "description": "A Simple App for Book Authoring",
   "main": "main.js",
   "scripts": {
-    "test": "electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "\u0016https://github.com/luciferreeves/authorr"
+    "url": "https://github.com/luciferreeves/authorr"
   },
   "keywords": [
     "authorr",
