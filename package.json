@@ -10,6 +10,7 @@
   "build": {
     "appId": "xyz.kumarpriyansh.authorr",
     "productName": "Authorr",
+    "author": "Kumar Priyansh <kumarpriyansh@icloud.com>",
     "copyright": "Copyright © 2019 Kumar Priyansh",
     "dmg": {
       "contents": [
