@@ -4,7 +4,35 @@
   "description": "A Simple App for Book Authoring",
   "main": "main.js",
   "scripts": {
-    "test": "electron ."
+    "test": "electron .",
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "xyz.kumarpriyansh.authorr",
+    "productName": "Authorr",
+    "copyright": "Copyright © 2019 Kumar Priyansh",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,7 +46,9 @@
   ],
   "author": "Kumar Priyansh",
   "license": "Apache-2.0",
-  "dependencies": {
-    "electron": "^5.0.3"
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^5.0.3",
+    "electron-builder": "^20.43.0"
   }
 }
