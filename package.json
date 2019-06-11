@@ -46,9 +46,11 @@
   ],
   "author": "Kumar Priyansh <kumarpriyansh@icloud.com>",
   "license": "Apache-2.0",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "electron": "^5.0.3",
+    "local-storage": "^2.0.0"
+  },
+  "devDependencies": {
     "electron-builder": "^20.43.0"
   }
 }
