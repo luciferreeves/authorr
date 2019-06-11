@@ -10,7 +10,6 @@
   "build": {
     "appId": "xyz.kumarpriyansh.authorr",
     "productName": "Authorr",
-    "author": "Kumar Priyansh <kumarpriyansh@icloud.com>",
     "copyright": "Copyright © 2019 Kumar Priyansh",
     "dmg": {
       "contents": [
@@ -45,7 +44,7 @@
     "writing",
     "authors"
   ],
-  "author": "Kumar Priyansh",
+  "author": "Kumar Priyansh <kumarpriyansh@icloud.com>",
   "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {
