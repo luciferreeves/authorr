@@ -46,6 +46,7 @@
   "author": "Kumar Priyansh <kumarpriyansh@icloud.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "jquery": "^3.4.1",
     "local-storage": "^2.0.0"
   },
   "devDependencies": {

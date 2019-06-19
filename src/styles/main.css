@@ -10,7 +10,7 @@
 }
 .pane {
     border-left: none !important;
-    background-color: #fff;
+    background-color: #333333;
 }
 .nav-group-item {
     padding: 10px 10px !important;
@@ -18,4 +18,31 @@
 }
 .nav-group-item.active {
     background-color: #156CD5 !important;
+}
+.whiteText {
+    color: white;
+}
+.template {
+    display: inline-block;
+}
+.templateIcon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 105px;
+    height: 148.5px;
+    background-color: #fff;
+}
+.templateName {
+    text-align: center;
+}
+.templateName span {
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+.clickedText {
+    background-color: #156CD5;
+}
+.clicked {
+    outline: solid 3px #156CD5;
 }

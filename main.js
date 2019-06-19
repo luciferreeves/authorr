@@ -11,7 +11,10 @@ function createWindow () {
     frame: false,
     // transparent: true,
     vibrancy: 'dark',
-    titleBarStyle: 'hidden'
+    titleBarStyle: 'hidden',
+    webPreferences: {
+      nodeIntegration: true
+    }
   })
 
   // and load the index.html of the app.
