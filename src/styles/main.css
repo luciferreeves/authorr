@@ -7,10 +7,14 @@
     z-index: 99;
     -webkit-user-select: none;
     -webkit-app-region: drag;
+    /* background-color: rgb(255, 255, 255); */
+    /* border-radius: 5px 5px 0px 0px; */
 }
 .content {
     position: absolute;
     top: 40px;
+    /* background-color: #fff; */
+    /* border-radius: 0px 0px 5px 5px; */
     height: calc(100vh - 40px);
     width: 100%;
 }
@@ -28,4 +32,19 @@ body {
     position: absolute;
     top: 0px;
     left: 10px;
+}
+.buttonsContainer {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+.windowBtn {
+    font-size: 12px;
+    margin-top: 12px;
+    background-color: transparent;
+    border: none;
+}
+#r {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 27px;
 }
