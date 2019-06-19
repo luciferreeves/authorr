@@ -17,4 +17,21 @@ $(document).ready(function(){
             $('.template .templateName span').removeClass('clickedText');
         }
     });
+    $('#startSelected').click(function(){
+        if ($('.template .templateIcon').hasClass('clicked')){
+            var parentId = ($('.clicked').parent().attr('id'));
+            start(parentId);
+        }
+        else {
+            showError('No Template Selected!', 'No template was selected. Please Select a template to get started!')
+        }
+    })
+    function showError(heading, message) {
+        const { remote } = window.require('electron')
+        const dialog = remote.dialog
+        dialog.showErrorBox(heading, message);
+    }
+    function start(id) {
+        alert('This would start the ' + id + ' template');
+    }
 })

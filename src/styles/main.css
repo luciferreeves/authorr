@@ -24,6 +24,7 @@
 }
 .template {
     display: inline-block;
+    margin-right: 20px;
 }
 .templateIcon {
     background-size: contain;
