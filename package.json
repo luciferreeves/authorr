@@ -11,6 +11,7 @@
     "appId": "xyz.kumarpriyansh.authorr",
     "productName": "Authorr",
     "copyright": "Copyright © 2019 Kumar Priyansh",
+    "icon": "docs/logo/logo_small.icns",
     "dmg": {
       "contents": [
         {
@@ -23,15 +24,13 @@
           "type": "link",
           "path": "/Applications"
         }
-      ]
+      ],
+      "icon": "docs/logo/mounted.icns"
     },
     "linux": {
       "target": [
         "deb"
       ]
-    },
-    "win": {
-      "target": "NSIS"
     }
   },
   "repository": {
