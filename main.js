@@ -10,7 +10,7 @@ function createWindow () {
     height: 600,
     frame: false,
     // transparent: true,
-    vibrancy: 'light',
+    vibrancy: 'dark',
     titleBarStyle: 'hidden'
   })
 

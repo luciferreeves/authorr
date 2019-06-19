@@ -1,50 +1,21 @@
 .dragBar {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
     -webkit-user-select: none;
     -webkit-app-region: drag;
-    /* background-color: rgb(255, 255, 255); */
-    /* border-radius: 5px 5px 0px 0px; */
 }
-.content {
-    position: absolute;
-    top: 40px;
-    /* background-color: #fff; */
-    /* border-radius: 0px 0px 5px 5px; */
-    height: calc(100vh - 40px);
-    width: 100%;
+.window {
+    background-color: transparent !important;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato';
+.sidebar {
+    background-color: transparent !important;
 }
-.title {
-    font-size: 24px;
-    line-height: 5px;
-    margin: 30px 0px 0px 0px;
+.pane {
+    border-left: none !important;
+    background-color: #fff;
 }
-.titleContainer {
-    position: absolute;
-    top: 0px;
-    left: 10px;
+.nav-group-item {
+    padding: 10px 10px !important;
+    color: #FFFFFF !important;
 }
-.buttonsContainer {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-}
-.windowBtn {
-    font-size: 12px;
-    margin-top: 12px;
-    background-color: transparent;
-    border: none;
-}
-#r {
-    font-family: 'Times New Roman', Times, serif !important;
-    font-size: 27px;
+.nav-group-item.active {
+    background-color: #156CD5 !important;
 }
