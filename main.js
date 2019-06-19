@@ -9,7 +9,9 @@ function createWindow () {
     width: 800, 
     height: 600,
     frame: false,
-    transparent: true
+    // transparent: true,
+    vibrancy: 'light',
+    titleBarStyle: 'hidden'
   })
 
   // and load the index.html of the app.
