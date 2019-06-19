@@ -7,8 +7,9 @@ A desktop app for authors.
 
 #### An Original Project By Kumar Priyansh
 
-<img src="docs/extras/runsonmac.png" height="70px"><br>
-<img src="docs/extras/notav.png" width="160px">
+<img src="docs/extras/runsonmac.png" height="70px">
+
+##### This app is not available with Windows or Linux based distros. However, it could be made available on those platforms by cloning and making necessary changes.
 
 ## For Developers:
 
