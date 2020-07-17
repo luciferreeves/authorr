@@ -17,19 +17,7 @@ A desktop app for authors.
   ````
   git clone https://github.com/luciferreeves/authorr
   ````
-- ### Dependencies:
-    ````
-    "dependencies": {
-        "jquery": "^3.4.1",
-        "local-storage": "^2.0.0"
-    }
 
-    "devDependencies": {
-        "electron": "^5.0.3",
-        "@fortawesome/fontawesome-free": "^5.9.0",
-        "electron-builder": "^20.43.0"
-    }
-    ````
 - ### How to get started on macOS:
 
         npm install && npm start
