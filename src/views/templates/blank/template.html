@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../../nativekit/css/all.css">
     <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="../../../Quill/quill.snow.css">
 </head>
 
 <body>
@@ -19,6 +20,52 @@
                     <i class="icon nk-plus"></i>
                 </button>
 
+                <div id="toolbar-container">
+                    <span class="ql-formats">
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <select class="ql-color"></select>
+                        <select class="ql-background"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-script" value="sub"></button>
+                        <button class="ql-script" value="super"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-header" value="1"></button>
+                        <button class="ql-header" value="2"></button>
+                        <button class="ql-blockquote"></button>
+                        <button class="ql-code-block"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-direction" value="rtl"></button>
+                        <select class="ql-align"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-link"></button>
+                        <button class="ql-image"></button>
+                        <button class="ql-video"></button>
+                        <button class="ql-formula"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                    </span>
+                </div>
+
             </div>
         </header>
         <div class="content">
@@ -29,12 +76,31 @@
                         <div id="chapters"></div>
                     </nav>
                 </div>
-                <div class="pane"></div>
+                <div class="pane">
+                    <div class="padded-more">
+                        <div id="editor">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../../../scripts/katex.min.js"></script>
+    <script src="../../../scripts/highlight.min.js"></script>
+    <script src="../../../Quill/quill.js"></script>
     <script src="template.js"></script>
+    <script>
+        var quill = new Quill('#editor', {
+            modules: {
+                formula: true,
+                syntax: true,
+                toolbar: '#toolbar-container'
+            },
+            placeholder: 'Compose an epic...',
+            theme: 'snow'
+        });
+    </script>
 </body>
 
 </html>

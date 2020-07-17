@@ -1,0 +1,7 @@
+#toolbar-container {
+    display: inline-block;
+    border: none;
+}
+.ql-editing {
+    left: 0px !important;
+}
