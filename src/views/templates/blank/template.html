@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../../nativekit/css/all.css">
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="../../../Quill/quill.snow.css">
+    <link rel="stylesheet" href="../../../nativekit/css/all.css">
 </head>
 
 <body>
@@ -20,49 +20,58 @@
                     <i class="icon nk-plus"></i>
                 </button>
 
+                <div class="button-group">
+                    <button class="button button-default">
+                        <i class="icon nk-ccw"></i>
+                    </button>
+                    <button class="button button-default">
+                        <i class="icon nk-cw"></i>
+                    </button>
+                </div>
+
                 <div id="toolbar-container">
-                    <span class="ql-formats">
-                        <select class="ql-font"></select>
-                        <select class="ql-size"></select>
+                    <span class="ql-formats editor-button-group">
+                        <select title="Change Font Style" class="ql-font edit-button editor-button"></select>
+                        <select title="Change Font Size" style="border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important;" class="ql-size edit-button editor-button"></select>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Bold" class="ql-bold edit-button editor-button"></button>
+                        <button title="Italic" class="ql-italic edit-button editor-button"></button>
+                        <button title="Underline" class="ql-underline edit-button editor-button"></button>
+                        <button title="Strikethrough" class="ql-strike edit-button editor-button"></button>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <select title="Font Color" class="ql-color edit-button editor-button"></select>
+                        <select title="Font Background Color" style="border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important;" class="ql-background edit-button editor-button"></select>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Subscript" class="ql-script edit-button editor-button" value="sub"></button>
+                        <button title="Superscript" class="ql-script edit-button editor-button" value="super"></button>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Heading 1" class="ql-header edit-button editor-button" value="1"></button>
+                        <button title="Heading 2" class="ql-header edit-button editor-button" value="2"></button>
+                        <button title="Blockquote" class="ql-blockquote edit-button editor-button"></button>
+                        <button title="Insert Code Block" class="ql-code-block edit-button editor-button"></button>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Insert Ordered List" class="ql-list edit-button editor-button" value="ordered"></button>
+                        <button title="Insert Unordered List" class="ql-list edit-button editor-button" value="bullet"></button>
+                        <button title="Indent Left" class="ql-indent edit-button editor-button" value="-1"></button>
+                        <button title="Indent Right" class="ql-indent edit-button editor-button" value="+1"></button>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Change Direction: RTL" class="ql-direction edit-button editor-button" value="rtl"></button>
+                        <select title="Change Text Alignment" style="border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important;" class="ql-align edit-button editor-button"></select>
+                    </span>
+                    <span class="ql-formats editor-button-group">
+                        <button title="Insert Link" class="ql-link edit-button editor-button"></button>
+                        <button title="Insert Image" class="ql-image edit-button editor-button"></button>
+                        <button title="Insert Video" class="ql-video edit-button editor-button"></button>
+                        <button title="Insert Formula" class="ql-formula edit-button editor-button"></button>
                     </span>
                     <span class="ql-formats">
-                        <button class="ql-bold"></button>
-                        <button class="ql-italic"></button>
-                        <button class="ql-underline"></button>
-                        <button class="ql-strike"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <select class="ql-color"></select>
-                        <select class="ql-background"></select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-script" value="sub"></button>
-                        <button class="ql-script" value="super"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-header" value="1"></button>
-                        <button class="ql-header" value="2"></button>
-                        <button class="ql-blockquote"></button>
-                        <button class="ql-code-block"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-list" value="ordered"></button>
-                        <button class="ql-list" value="bullet"></button>
-                        <button class="ql-indent" value="-1"></button>
-                        <button class="ql-indent" value="+1"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-direction" value="rtl"></button>
-                        <select class="ql-align"></select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-link"></button>
-                        <button class="ql-image"></button>
-                        <button class="ql-video"></button>
-                        <button class="ql-formula"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-clean"></button>
+                        <button title="Clean Formatting" class="ql-clean edit-button editor-button"></button>
                     </span>
                 </div>
 
@@ -96,6 +105,10 @@
                 formula: true,
                 syntax: true,
                 toolbar: '#toolbar-container'
+            },
+            history: {
+                delay: 2000,
+                maxStack: 500
             },
             placeholder: 'Compose an epic...',
             theme: 'snow'

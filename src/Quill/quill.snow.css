@@ -323,7 +323,7 @@
   background-color: #e60000;
 }
 .ql-editor .ql-bg-orange {
-  background-color: #f90;
+  background-color: #ff9900;
 }
 .ql-editor .ql-bg-yellow {
   background-color: #ff0;
@@ -344,7 +344,7 @@
   color: #e60000;
 }
 .ql-editor .ql-color-orange {
-  color: #f90;
+  color: transparent;
 }
 .ql-editor .ql-color-yellow {
   color: #ff0;
@@ -679,14 +679,14 @@
   padding-top: 5px;
 }
 .ql-snow .ql-picker.ql-expanded .ql-picker-label {
-  color: #ccc;
+  color: #444;
   z-index: 2;
 }
 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill {
-  fill: #ccc;
+  fill: #444;
 }
 .ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke {
-  stroke: #ccc;
+  stroke: #444;
 }
 .ql-snow .ql-picker.ql-expanded .ql-picker-options {
   display: block;

@@ -1,7 +1,139 @@
 #toolbar-container {
-    display: inline-block;
-    border: none;
+  display: inline-block;
+  border: none;
 }
 .ql-editing {
-    left: 0px !important;
+  left: 0px !important;
+}
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  color: #444 !important;
+  border: none !important;
+  outline: none !important;
+}
+.edit-button {
+  display: inline-block !important;
+  /* padding: 2px 8px !important; */
+  margin-bottom: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  cursor: default !important;
+  background-image: none !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06) !important;
+  -webkit-app-region: no-drag !important;
+  font-family: SFProtext !important;
+}
+
+.editor-button {
+  color: #333 !important;
+  border-top-color: #c2c0c2 !important;
+  border-right-color: #c2c0c2 !important;
+  border-bottom-color: #a19fa1 !important;
+  border-left-color: #c2c0c2 !important;
+  background-color: #fcfcfc !important;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #fcfcfc),
+    color-stop(100%, #f1f1f1)
+  ) !important;
+  background-image: -webkit-linear-gradient(
+    top,
+    #fcfcfc 0%,
+    #f1f1f1 100%
+  ) !important;
+  background-image: linear-gradient(
+    to bottom,
+    #fcfcfc 0%,
+    #f1f1f1 100%
+  ) !important;
+}
+
+.editor-button:active {
+  background-color: #ddd !important;
+  background-image: none !important;
+}
+
+.editor-button-group {
+  position: relative !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  -webkit-app-region: no-drag !important;
+}
+
+.editor-button-group .edit-button {
+  position: relative !important;
+  float: left !important;
+}
+
+.editor-button-group .edit-button:focus,
+.editor-button-group .edit-button:active {
+  z-index: 2 !important;
+}
+
+.editor-button-group .edit-button.edit-button-active {
+  z-index: 3 !important;
+}
+
+.editor-button-group .edit-button + .edit-button,
+.editor-button-group .edit-button + .editor-button-group,
+.editor-button-group .editor-button-group + .edit-button,
+.editor-button-group .editor-button-group + .editor-button-group {
+  margin-left: -1px !important;
+}
+
+.editor-button-group > .edit-button:last-child {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+.editor-button-group > .edit-button:first-child {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.editor-button-group > .edit-button:not(:first-child):not(:last-child) {
+  border-radius: 0 !important;
+}
+
+.editor-button-group .edit-button + .edit-button {
+  border-left: 1px solid #c2c0c2 !important;
+}
+
+.editor-button-group .edit-button + .edit-button.edit-button-active {
+  border-left: 0 !important;
+}
+
+.editor-button-group .edit-button-active {
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  background-color: #6d6c6d !important;
+  background-image: none !important;
+}
+select.ql-color {
+    display: none !important;
+}
+select.ql-background {
+    display: none !important;
+}
+select.ql-align {
+    display: none !important;
+}
+select.ql-font {
+    display: none !important;
+}
+select.ql-size {
+    display: none !important;
+}
+.ql-snow .ql-picker-label {
+    padding-left: 0px !important;
 }
