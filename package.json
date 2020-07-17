@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "build",
-    "start": "electron ."
+    "start": "electron src/main.js"
   },
   "build": {
     "appId": "xyz.kumarpriyansh.authorr",
