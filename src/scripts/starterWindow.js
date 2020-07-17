@@ -41,7 +41,7 @@ $(document).ready(function () {
         dialog.showErrorBox(heading, message);
     }
     function start(id) {
-        var templateURL = 'file://' + __dirname + `/templates/${id}.html`;
+        var templateURL = 'file://' + __dirname + `/templates/${id}/template.html`;
         var window = remote.getCurrentWindow();
 
         window.setSize(monitorWidth * 0.75, monitorHeight * 0.75, false);
