@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../../nativekit/css/all.css">
+    <link rel="stylesheet" href="template.css">
 </head>
+
 <body>
-    <h1>The Blank Template</h1>
+    <div class="window">
+        <header class="titlebar draggable">
+            <h1 class="window-title">Blank Template</h1>
+            <div class="toolbars">
+
+                <button title="Add a new chapter" class="button button-default">
+                    <i class="icon nk-plus"></i>
+                </button>
+
+            </div>
+        </header>
+        <div class="content">
+            <div class="pane-group">
+                <div class="pane sidebar pane-normal">
+                    <nav class="nav-group">
+                        <h5 class="title">Chapters</h5>
+                        <div id="chapters"></div>
+                    </nav>
+                </div>
+                <div class="pane"></div>
+            </div>
+        </div>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="template.js"></script>
 </body>
+
 </html>

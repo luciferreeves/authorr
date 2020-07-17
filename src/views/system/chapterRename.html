@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../nativekit/css/all.css">
+</head>
+
+<body>
+    <div class="window">
+        <footer class="statusbar titlebar draggable">
+            <h1 class="window-title">Change Chapter Name</h1>
+            <div class="padded">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="newChapterName" placeholder="New Chapter Name">
+                </div>
+            </div>
+            <div class="toolbars">
+                <button id="ok" class="button button-blue pull-right">OK</button>
+                <button id="cancel" class="button button-default pull-right">Cancel</button>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script>
+    $('#newChapterName').focus();
+    $(document).on('keypress', function (e) {
+        if (e.which == 13) {
+            $('#ok').click();
+        }
+    })
+    const remote = require('electron').remote;
+    const { ipcRenderer } = require('electron');
+    $('#cancel').click(function () {
+        var window = remote.getCurrentWindow();
+        window.close();
+    });
+    $('#ok').click(function () {
+        ipcRenderer.send('renamedChapter', $('#newChapterName').val());
+    })
+    ipcRenderer.on('currentChapterName', (event, arg) => {
+        $('#newChapterName').val(arg);
+    })
+</script>
+
+</html>
