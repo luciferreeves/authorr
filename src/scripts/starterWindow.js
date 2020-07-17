@@ -1,4 +1,9 @@
+const remote = require('electron').remote;
+
 $(document).ready(function () {
+    var monitorWidth = screen.width;
+    var monitorHeight = screen.height;
+
     $('.nav-group').on('click', 'span', function () {
         $('.nav-group span.active').removeClass('active');
         $(this).addClass('active');
@@ -25,13 +30,22 @@ $(document).ready(function () {
         else {
             showError('No Template Selected!', 'No template was selected. Please Select a template to get started!')
         }
-    })
+    });
+    $('#cancelSelected').click(function () {
+        var window = remote.getCurrentWindow();
+        window.close();
+    });
     function showError(heading, message) {
         const { remote } = window.require('electron')
         const dialog = remote.dialog
         dialog.showErrorBox(heading, message);
     }
     function start(id) {
-        alert('This would start the ' + id + ' template');
+        var templateURL = 'file://' + __dirname + `/templates/${id}.html`;
+        var window = remote.getCurrentWindow();
+
+        window.setSize(monitorWidth * 0.75, monitorHeight * 0.75, false);
+        window.center();
+        window.loadURL(templateURL);
     }
 })
