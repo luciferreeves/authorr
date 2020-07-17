@@ -4,24 +4,49 @@ const MenuItem = remote.MenuItem;
 const { ipcRenderer } = require('electron');
 
 const chapterList = ['Chapterﬂ1'];
-const chapterCount = chapterList.length;
+const currentActiveChapter = 0;
+let chapterNameCount = 1;
 
 $(document).ready(function () {
     updateChapters();
+    setActiveChapter(currentActiveChapter);
 });
 
 function updateChapters() {
+
+    if (!chapterList.length) {
+        addChapter();
+    }
+
     $('#chapters').empty();
     chapterList.forEach(chapter => {
         const chapterName = chapter.replace(/ﬂ/g, ' ');
-        $('#chapters').append(`<span id="${chapter}" class="item active chapter_navigation">${chapterName}</span>`)
+        $('#chapters').append(`<span id="${chapter}" class="item chapter_navigation">${chapterName}</span>`)
     });
+
+    setActiveChapter(currentActiveChapter);
 }
+
+function setActiveChapter(currentActiveChapter) {
+    const chapter = chapterList[currentActiveChapter];
+    $(`#${chapter}`).addClass('active');
+}
+
+function addChapter() {
+    const chapterCount = chapterList.length;
+    chapterList[chapterCount] = `Chapterﬂ${chapterNameCount+1}`;
+    chapterNameCount++;
+    updateChapters();
+}
+
+$('#addChapter').click(() => {
+    addChapter();
+})
 
 let currentSelectedChapterForContextAction = null;
 let rightClickPosition = null;
 const chapterMenu = new Menu()
-const chapterContextItems = new MenuItem({
+const renameChapterMenuItem = new MenuItem({
     label: 'Rename Chapter',
     click: (e) => {
         const currentChapter = currentSelectedChapterForContextAction.replace(/ﬂ/g, ' ');
@@ -54,8 +79,19 @@ const chapterContextItems = new MenuItem({
             updateChapters();
         });
     }
-})
-chapterMenu.append(chapterContextItems);
+});
+
+const deleteChapterMenuItem = new MenuItem({
+    label: 'Delete Chapter',
+    click: (e) => {
+        const index = chapterList.findIndex(chapter => chapter === currentSelectedChapterForContextAction);
+        chapterList.splice(index, 1);
+        updateChapters();
+    }
+});
+
+chapterMenu.append(renameChapterMenuItem);
+chapterMenu.append(deleteChapterMenuItem);
 
 $(document).on('contextmenu', '.chapter_navigation', (e) => {
     e.preventDefault();
