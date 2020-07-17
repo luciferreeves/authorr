@@ -1,48 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Authorr</title>
-    <link rel="stylesheet" href="styles/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="photon/css/photon.min.css">
+    <link rel="stylesheet" href="../nativekit/css/all.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
     <div class="window">
-        <header class="toolbar toolbar-header dragBar">
-            <h1 class="title">Choose a Template</h1>
+        <header class="titlebar draggable">
+            <h1 class="window-title">Authorr</h1>
         </header>
-        <div class="window-content">
+        <div class="content">
             <div class="pane-group">
-                <div class="pane-one-fourth sidebar">
-                    <nav class="nav-group">
-                        <span class="nav-group-item active">
-                            All Templates
-                        </span>
-                        <!-- <span class="nav-group-item">
-                            Blank Templates
-                        </span>
-                        <span class="nav-group-item">
-                            Short Stories
-                        </span>
-                        <span class="nav-group-item">
-                            Novels & Plays
-                        </span>
-                        <span class="nav-group-item">
-                            Misc. Books
-                        </span>
-                        <span class="nav-group-item">
-                            Newspapers & Magazines
-                        </span>
-                        <span class="nav-group-item">
-                            Letters and Applications
-                        </span> -->
-                    </nav>
+                <div class="pane pane-normal sidebar">
+                    <div class="list">
+                        <li class="item active">All Templates</li>
+                    </div>
                 </div>
-                <div class="pane parentPane whiteText">
+                <div class="pane">
                     <div class="padded-more">
                         <div id="blank" class="template">
                             <div class="templateIcon"></div>
@@ -52,18 +32,16 @@
                 </div>
             </div>
         </div>
-        <footer class="toolbar toolbar-footer">
-            <div class="toolbar-actions">
-              <button class="btn btn-default">
-                Open Recent Document
-              </button>
-              <button id="startSelected" class="btn btn-primary pull-right">
-                Start with template
-              </button>
+        <footer class="titlebar statusbar">
+            <div class="toolbars">
+                <button id="startSelected" class="button button-blue pull-right">Create</button>
+                <button class="button button-default pull-right">Cancel</button>
             </div>
         </footer>
     </div>
     <script>window.$ = window.jQuery = require('jquery');</script>
-    <script src="scripts/starterWindow.js"></script>
+    <script src="../nativekit/scripts/nativekit.js"></script>
+    <script src="../scripts/starterWindow.js"></script>
 </body>
+
 </html>

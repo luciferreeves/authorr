@@ -1,0 +1,29 @@
+.template {
+    display: inline-block;
+    margin-right: 20px;
+}
+.templateIcon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 105px;
+    height: 148.5px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+.templateName {
+    text-align: center;
+}
+.templateName span {
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.clickedText {
+    background-color: #0C7EFF;
+    color: white;
+}
+.clicked {
+    box-shadow: 0 0 0 4px #0C7EFF;
+}

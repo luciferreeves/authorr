@@ -826,6 +826,15 @@ h6 {
     -webkit-app-region: drag;
 }
 
+.statusbar > .toolbars {
+    margin-top: 6px;
+    margin-bottom: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    -webkit-app-region: no-drag;
+}
+
 .toolbars:before, .toolbars:after {
     display: table;
     content: " ";
@@ -1503,15 +1512,15 @@ th:last-child, td:last-child {
 }
 
 .list .item {
-    padding: 10px 10px 5px 10px;
+    padding: 10px 10px 10px 10px;
     font-size: 12px;
     color: #414142;
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
 }
 
 .dark .list .item {
     color: #ffffff;
-    border-top: 1px solid #000000;
+    /* border-top: 1px solid #000000; */
 }
 
 .list .item:first-child {
